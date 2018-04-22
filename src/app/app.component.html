@@ -29,3 +29,10 @@
     <div *ngSwitchCase="'list'">List view content</div>
     <div *ngSwitchDefault>Otherwise</div>
 </div>
+
+<h2>Ng For Statement</h2>
+<ul>
+    <li *ngFor="let course of courses; index as i; even as isEven">
+        {{ i }} {{course.name}} <span *ngIf="isEven">(EVEN}</span>
+    </li>
+</ul>
