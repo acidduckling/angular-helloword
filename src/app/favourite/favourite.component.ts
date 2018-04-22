@@ -9,8 +9,6 @@ export class FavouriteComponent {
   @Input('isFavourite') isSelected: boolean;
   @Output('change') change = new EventEmitter();
 
-  constructor() { }
-
   onClick() {
     this.isSelected = !this.isSelected;
     this.change.emit({ newValue: this.isSelected });
