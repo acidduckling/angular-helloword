@@ -1,14 +1,9 @@
-<like [isActive]="tweet.isLiked" [likesCount]="tweet.likesCount"></like>
-<br>
-<br>
-<br>
-<bootstrap-panel>
-    <ng-container class="heading">
-        This is the Heading
-    </ng-container>
-    <ng-container class="body">
-        <h2>Body Content</h2>
-        <p>THis is where the body content would go yall</p>
-    </ng-container>
-</bootstrap-panel>
-<!-- <favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChange($event)"><favourite> -->
+<div *ngIf="courses.length > 0; then coursesList else noCourses">
+</div>
+
+<ng-template #coursesList>
+    List of courses
+</ng-template>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
