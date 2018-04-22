@@ -8,6 +8,7 @@ import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
 import { StarComponent } from './star/star.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 
 
@@ -18,7 +19,8 @@ import { StarComponent } from './star/star.component';
     CoursesComponent,
     AuthorsComponent,
     SummaryPipe,
-    StarComponent
+    StarComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
