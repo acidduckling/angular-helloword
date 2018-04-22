@@ -9,6 +9,7 @@ import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
 
 
 
@@ -20,7 +21,8 @@ import { TitleCasePipe } from './title-case.pipe';
     AuthorsComponent,
     SummaryPipe,
     FavouriteComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

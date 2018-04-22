@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'favourite',
   templateUrl: './favourite.component.html',
-  styleUrls: ['./favourite.component.css']
+  styleUrls: ['./favourite.component.css'],
+  encapsulation: ViewEncapsulation.Native
 })
 export class FavouriteComponent {
   @Input('isFavourite') isSelected: boolean;
