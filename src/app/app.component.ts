@@ -16,6 +16,9 @@ export class AppComponent {
   // ngSwitch:
   viewMode = 'somethingElse';
 
+  // Part of NgStyle...
+  canSave = true;
+
   //part of ngFor Example
   onAdd() {
     this.courses.push({id: 4, name: 'course4 '})

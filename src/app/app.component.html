@@ -47,3 +47,20 @@
         {{ course.name }}
     </li>
 </ul>
+
+<h2>NgStyle Example</h2>
+<button
+    [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+    [style.color]="canSave ? 'white' : 'black'"
+    [style.fontWeight]="canSave ? 'bold' : 'normal'">
+    Save
+</button>
+
+<button
+    [ngStyle]="{
+        'backgroundColor': canSave ? 'blue' : 'gray',
+        'color': canSave ? 'white' : 'black',
+        'fontWeight': canSave ? 'bold' : 'normal'
+    }">
+    Save
+</button>
