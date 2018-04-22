@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses = [
-    { id: 1, name: 'course1 ' },
-    { id: 2, name: 'course2 ' },
-    { id: 3, name: 'course3 ' }
-  ];
+  // courses = [
+  //   { id: 1, name: 'course1 ' },
+  //   { id: 2, name: 'course2 ' },
+  //   { id: 3, name: 'course3 ' }
+  // ];
+  courses = [];
 
   // ngSwitch:
   viewMode = 'somethingElse';
@@ -27,5 +28,17 @@ export class AppComponent {
 
   onChange(course) {
     course.name = 'UPDATED';
+  }
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course1 ' },
+      { id: 2, name: 'course2 ' },
+      { id: 3, name: 'course3 ' }
+    ]
+  }
+
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
   }
 }

@@ -39,3 +39,11 @@
         <button (click)="onChange(course)">Update</button>
     </li>
 </ul>
+
+<h2>NgFor and Trackby</h2>
+<button (click)="loadCourses()">Load Courses</button>
+<ul>
+    <li *ngFor="let course of courses; trackBy: trackCourse">
+        {{ course.name }}
+    </li>
+</ul>
