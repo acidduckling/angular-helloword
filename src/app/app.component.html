@@ -1,3 +1,4 @@
+<h2>Approach 1</h2>
 <div *ngIf="courses.length > 0; then coursesList else noCourses">
 </div>
 
@@ -7,3 +8,13 @@
 <ng-template #noCourses>
     No courses yet
 </ng-template>
+<br>
+<br>
+
+<h2>Approach 2 - Hidden attribute</h2>
+<div [hidden]="courses.length == 0">
+    List of courses
+</div>
+<div [hidden]="courses.length > 0">
+    No courses yet
+</div>
