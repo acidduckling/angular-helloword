@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Title Case Pipe example';
+  post = {
+    title: 'Title',
+    isFavourite: true
+  }
+
+  onFavouriteChange() {
+    console.log('favourite changed');
+  }
 }

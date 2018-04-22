@@ -7,7 +7,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
-import { StarComponent } from './star/star.component';
+import { FavouriteComponent } from './favourite/favourite.component';
 import { TitleCasePipe } from './title-case.pipe';
 
 
@@ -19,7 +19,7 @@ import { TitleCasePipe } from './title-case.pipe';
     CoursesComponent,
     AuthorsComponent,
     SummaryPipe,
-    StarComponent,
+    FavouriteComponent,
     TitleCasePipe
   ],
   imports: [

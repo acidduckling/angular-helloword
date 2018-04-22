@@ -1,10 +1,2 @@
-<h1>Angular</h1>
-<courses></courses>
-<br>
-<br>
-<br>
-<star></star>
-<input [(ngModel)]="title"><br>
-{{title | titleCase}}
-<br>
-<br>
+
+<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChange()"><favourite>
