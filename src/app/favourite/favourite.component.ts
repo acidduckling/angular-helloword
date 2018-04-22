@@ -3,8 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
 @Component({
   selector: 'favourite',
   templateUrl: './favourite.component.html',
-  styleUrls: ['./favourite.component.css'],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ['./favourite.component.css']
 })
 export class FavouriteComponent {
   @Input('isFavourite') isSelected: boolean;
