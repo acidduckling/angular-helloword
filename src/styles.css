@@ -4,3 +4,8 @@
 body {
     padding: 20px;
 }
+
+/*Form validation styling*/
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
