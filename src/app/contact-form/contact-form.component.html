@@ -38,5 +38,12 @@
     <label for="comment">Comment</label>
     <textarea id="comment" ngModel name="comment" cols="30" rows="10" class="form-control"></textarea>
   </div>
+
+  <div class="checbox">
+    <label>
+      <input type="checkbox" name="isSubscribed" ngModel>Subscribe to mailing list
+    </label>
+  </div>
+  <p>{{ f.value | json }}</p>
   <button [disabled]="f.invalid" class="btn btn-primary">Submit</button>
 </form>
