@@ -38,5 +38,5 @@
     <label for="comment">Comment</label>
     <textarea id="comment" ngModel name="comment" cols="30" rows="10" class="form-control"></textarea>
   </div>
-  <button class="btn btn-primary">Submit</button>
+  <button [disabled]="f.invalid" class="btn btn-primary">Submit</button>
 </form>
