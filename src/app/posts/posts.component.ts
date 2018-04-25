@@ -15,11 +15,7 @@ export class PostsComponent implements OnInit {
   constructor(private service: PostService) {}
 
   ngOnInit(): void {
-    this.service.getAll().subscribe(
-      response => {
-        this.posts = response.json();
-      }
-    );
+    this.service.getAll().subscribe(posts => this.posts = posts);
   }
 
   createPost(input: HTMLInputElement) {
@@ -27,9 +23,9 @@ export class PostsComponent implements OnInit {
     input.value = "";
 
     this.service.create(post).subscribe(
-      response => {
-        post["id"] = response.json().id;
-        this.posts.splice(0, 0, post);
+      newPost => {
+        newPost["id"] = newPost.id;
+        this.posts.splice(0, 0, newPost);
       },
       (error: AppError) => {
         if (error instanceof BadInput) {
@@ -41,15 +37,15 @@ export class PostsComponent implements OnInit {
   }
 
   updatePost(post) {
-    this.service.update(post).subscribe(response => {
-      console.log(response.json());
+    this.service.update(post).subscribe(updatedPost => {
+      console.log(updatedPost);
     });
     //this.http.put(this.url, JSON.stringify(post));
   }
 
   deletePost(post) {
     this.service.delete(post.id).subscribe(
-      response => {
+      () => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       },
