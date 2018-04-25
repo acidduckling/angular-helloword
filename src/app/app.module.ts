@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 
 
@@ -19,6 +20,7 @@ import { PostsComponent } from './posts/posts.component';
     HttpModule
   ],
   providers: [
+    PostService
   ],
   bootstrap: [AppComponent]
 })
