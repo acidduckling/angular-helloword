@@ -5,7 +5,7 @@
       <img class="media-object img-circle" src="{{f.avatar_url}}" alt="{{f.login}}">
     </a>
     <div class="media-body">
-      <h4 class="media-heading">{{f.login}}</h4>
+      <h4 class="media-heading"><a [routerLink]="['followers', f.id]">{{f.login}}</a></h4>
       <a [href]="f.html_url">{{f.html_url}}</a>
     </div>
   </li>
